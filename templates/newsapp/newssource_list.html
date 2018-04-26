@@ -8,7 +8,7 @@
     <a href="{% url "source_add" %}">Add New Source</a>
     {% for source in object_list %}
             <li>{{ source.source_name }} [{{ source.source_perc}}%]  :
-                <a href="{% url "source_edit" source.id %}"> Edit Percentage</a>
+                <a href="{% url "source_edit" source.id %}"> Edit News Preference</a>
                 <a href="{% url "source_delete" source.id %}"> | Delete News Source</a>
             </li>
             {% endfor %}
