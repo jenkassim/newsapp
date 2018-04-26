@@ -1,0 +1,26 @@
+version: '2'
+
+volumes:
+  postgresql_data: {}
+
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - postgresql_data:/var/lib/pgsql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - "127.0.0.1:5432:5432"
+    env_file: env
+
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

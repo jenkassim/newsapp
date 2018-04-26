@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='text-center'>
+    <h1>NewsFeed List</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+        <ol>
+        {% for feed in feeds %}
+        <li>
+            <a href="{% url "feed_detail" feed.id %}">{{feed.title}}</a></br>
+            Description: {{ feed.content|truncatechars:128 }}</br>
+            Source: {{ feed.source }} </br></br>
+        </li>
+        {% endfor %}
+        </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}

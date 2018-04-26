@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>News</title>
+    {% include 'base/css.html' %}
+    {% block base_head %}{% endblock %}
+</head>
+
+<body>
+    <a href="{% url "feed_list" %}">View News Feed</a></br>
+    <a href="{% url "source_list" %}">Update News Preference</a></br>
+    <a href="{% url "feed_refresh" %}">Get Latest News</a></br>
+    <a href="{% url "feed_delete" %}">Clear News Feed</a></br>
+
+    {% block content %}{% endblock %}
+</body>
+</html>

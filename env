@@ -1,0 +1,5 @@
+DB_NAME=newsapp
+DB_USER=newsapp
+DB_PASS=password
+DB_SERVICE=postgres
+DB_PORT=5432

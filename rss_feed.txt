@@ -1,0 +1,5 @@
+http://www.thestar.com.my/rss/editors-choice/main/
+https://www.star2.com/category/entertainment/movies/feed/
+http://feeds.reuters.com/reuters/topNews
+http://www.asiaone.com/rss-feed/5
+http://feeds.bbci.co.uk/news/world/rss.xml
